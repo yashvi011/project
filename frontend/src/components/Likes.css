@@ -1,0 +1,133 @@
+.likes-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffe4e1, #ffb6c1);
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+}
+
+.likes-page h2 {
+  color: #f39c12;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.likes-page p {
+  text-align: center;
+  font-size: 1.2em;
+  color: #666;
+  margin: 50px 0;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  border: 2px solid #ff69b4;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  margin: 15px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff69b4;
+  margin: 0 15px 5px;
+}
+
+.category {
+  margin: 0 15px 15px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.product-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background: #f9f9f9;
+}
+
+.like-btn,
+.add-to-cart-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.like-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+.like-btn:hover {
+  background: #c0392b;
+  transform: translateY(-1px);
+}
+
+.like-btn.liked {
+  background: #e74c3c;
+}
+
+.add-to-cart-btn {
+  background: #f39c12;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.add-to-cart-btn:hover {
+  background: #e67e22;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .likes-page {
+    padding: 10px;
+  }
+
+  .likes-page h2 {
+    font-size: 2em;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  .product-card {
+    border-radius: 8px;
+  }
+
+  .product-image {
+    height: 150px;
+  }
+}
